@@ -188,7 +188,9 @@ ng = {};
           parseFloat(jsonData.documents[0].confidenceScores.positive),
           parseFloat(jsonData.documents[0].confidenceScores.negative)
         )
-	if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.30) {
+	if (parseFloat(jsonData.documents[0].confidenceScores.neutral) > 0.50) {
+		word = lull;
+	} else if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.30) {
 		word = sad;
 	} else if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.50) {
 		word = melac;
