@@ -36,6 +36,109 @@
 </style>
 		  
 <script type="text/javascript">
+class Note {
+  constructor(note, len) {
+    this.note = note;
+    this.len = len;
+  }
+}
+
+var sad = [
+new Note("A", 1 / 4), new Note("C#", 1 / 4), new Note("A", 1 / 2), new Note("G#", 1 / 2), new Note("A", 1 / 2), new Note("G#", 1 / 2), new Note("A", 1 / 2), new Note("E", 1 / 2), new Note("A", 1 / 2), new Note("D", 1 / 2), new Note("A", 1 / 4), new Note("C#", 1 / 4), new Note("A", 1 / 2), new Note("G#", 1 / 2), new Note("A", 1 / 2), new Note("G#", 1 / 2), new Note("A", 1 / 2), new Note("E", 1 / 2), new Note("A", 1 / 2), new Note("D", 3), new Note("A", 1 / 4), new Note("C#", 1 / 4), new Note("A", 1 / 2), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("D", 1 / 4), new Note("A", 1 / 4), new Note("C#", 1 / 2), new Note("D", 1 / 2), new Note("E", 1 / 2), new Note("C#", 1 / 2), new Note("B", 3 / 2), new Note("G#", 1), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 3 / 2), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("D", 1 / 4), new Note("C#", 1 / 4), new Note("B", 2), new Note("G#", 1), new Note("A", 1 / 2), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("D", 1 / 4), new Note("A", 1 / 4), new Note("C#", 1 / 2), new Note("D", 1 / 2), new Note("E", 1 / 2), new Note("C#", 1 / 2), new Note("B", 1 / 2), new Note("E", 1 / 2), new Note("E", 1 / 8), new Note("C#", 1 / 8), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("A", 1), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("A", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("E", 1 / 4), new Note("D", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1), new Note("E", 1 / 4), new Note("G#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 2), new Note("B", 1 / 2), new Note("A", 1 / 4), new Note("B", 1 / 8), new Note("A", 1 / 4), new Note("G#", 1 / 8), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 8), new Note("B", 1 / 8), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 8), new Note("B", 1 / 8), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 8), new Note("C#", 1 / 8), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G", 1 / 2), new Note("E", 1 / 2), new Note("B", 1 / 2), new Note("G#", 1 / 2), new Note("A", 1 / 4), new Note("A", 1 / 8), new Note("B", 1 / 8), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 8), new Note("D", 1 / 4), new Note("A", 1 / 4), new Note("C#", 1 / 2), new Note("D", 1 / 2), new Note("E", 1 / 2), new Note("A", 1 / 4), new Note("A", 1 / 8), new Note("B", 1 / 8), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("E", 1 / 4), new Note("G#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 8), new Note("C#", 1 / 8), new Note("B", 1 / 8), new Note("E", 1 / 4), new Note("G#", 1 / 4), new Note("E", 1 / 4), new Note("B", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("D", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("E", 1 / 4), new Note("D", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 2), new Note("B", 1 / 2), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 2), new Note("B", 1 / 2), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("E", 1 / 4), new Note("B", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("F#", 1 / 4), new Note("E", 1 / 4), new Note("D", 1 / 4), new Note("G#", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("E", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("F#", 1 / 4), new Note("E", 1 / 4), new Note("D", 1 / 4), new Note("B#", 1 / 4), new Note("E", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("G#", 1 / 4), new Note("E", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("D", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("E", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 3), new Note("A", 1 / 2), new Note("D", 1 / 4), new Note("B#", 1 / 4), new Note("A", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("C#", 1 / 4), new Note("B", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("A", 1 / 4), new Note("G#", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("D", 1 / 4), new Note("E", 1 / 4), new Note("A", 1 / 4), new Note("B", 1 / 4), new Note("C#", 1 / 4), new Note("G#", 1 / 2), new Note("B", 1 / 2), new Note("A", 1 / 4)
+];
+
+
+var happy = [
+new Note("G#", 1), new Note("B", 1/2), new Note("G#", 1/2), new Note("F#", 1/2),
+new Note("E", 1/2), new Note("D", 1/2), new Note("E", 1/2), new Note("A", 1), new Note("A", 1), new Note("A", 1), new Note("B", 1/2), new Note("G#", 1), new Note("C", 1/2), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2),
+new Note("D#", 1/2), new Note("E", 1/2), new Note("F#", 1), new Note("F#", 1), new Note("F#", 1.5), new Note("G", 1/2), new Note("G#", 1), new Note("B", 1/2), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("D#", 1/2), new Note("E", 1/2), new Note("C#", 1), new Note("C#", 1), new Note("C#", 1), new Note("B", 1/2), new Note("A", 1/2), new Note("G#", 1), new Note("F#", 1/2),
+new Note("E", 1/2), new Note("E", 1/8), new Note("C#", 1), new Note("D#", 1), new Note("E", 4), new Note("E", 1/8),new Note("G", 1), new Note("F#", 1/2), new Note("E", 1/2), new Note("C", 1), new Note("D", 1/2), new Note("E", 1/2),new Note("F#", 1), new Note("E", 1/2), new Note("D", 1/2), new Note("B", 1), new Note("C", 1/2), new Note("D", 1/2), new Note("E", 1), new Note("F#", 1/2), new Note("G", 1/2),
+new Note("A", 1), new Note("B", 1/2), new Note("C", 1/2), new Note("D", 1), new Note("F#", 1/2), new Note("E", 1/2), new Note("D", 1.5), new Note("C", 1/2), new Note("B", 1), new Note("A", 1/2), new Note("G", 1/2), new Note("E", 1),
+new Note("F#", 1/2), new Note("G", 1/2), new Note("G", 1/8), new Note("B", 1/2), new Note("A", 1/2), new Note("G", 1/2), new Note("F#", 1/2), new Note("D#", 1), new Note("E", 1/2), new Note("F#", 1/2), new Note("G", 1), new Note("A", 1/2), new Note("B", 2), new Note("C", 1), new Note("G", 1.5), new Note("F#", 1/8), new Note("E", 2), new Note("B", 2), new Note("A", 2), new Note("B", 2), new Note("E", 2), new Note("B", 2), new Note("C#", 3), new Note("B", 1/2), new Note("A", 1/2), new Note("G#", 1), new Note("B", 1/2), new Note("G#", 1/2), 
+new Note("F#", 1/2),new Note("E", 1/2), new Note("D#", 1/2), new Note("E", 1/2), new Note("A", 1), new Note("A", 1), new Note("A", 1), new Note("B", 1/2), new Note("G#", 1), new Note("B#", 1/2), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("D#", 1/2), new Note("E", 1/2), new Note("F#", 1), new Note("F#", 1), new Note("G#", 1), new Note("B", 1/2), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("D#", 1/2), new Note("E", 1/2), new Note("C#", 1), new Note("C#", 1), new Note("D#", 1/2), new Note("E", 1/2),
+ new Note("A", 1/2), new Note("F#", 1), new Note("E", 1/2), new Note("D", 1/2), new Note("C", 1/2), new Note("F#", 1.5), new Note("C#", 1/8), new Note("C#", 1/8), new Note("B", 1), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("B", 1.5), new Note("C", 1/8), new Note("A", 1/2), new Note("F#", 1), new Note("E", 1/2), new Note("D", 1/2), new Note("C", 1/2), new Note("F#", 1.5), new Note("C#", 1/8), new Note("C#", 1), new Note("B", 1/2), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("B", 1.5), new Note("B#", 1/8), new Note("C#", 1/2), new Note("G#", 1/2), new Note("A", 1/2), new Note("B", 1/2), 
+new Note("C#", 1/2), new Note("A", 1/2), new Note("G#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("B#", 1/2), new Note("C#", 1/2), new Note("D#", 1/2), new Note("E", 1/2),new Note("E", 1/2), new Note("D#", 1/2), new Note("C#", 1/2), new Note("B", 1/2), new Note("D#", 1/2), new Note("F#", 1/2), new Note("E", 1/2), new Note("D#", 1/2), new Note("B", 1/2), new Note("B", 1/2), new Note("G#", 1/2), new Note("G#", 1), new Note("F#", 1), new Note("C#", 1), new Note("D#", 1), new Note("E", 3)
+];
+
+var music = [];
+music[hashCode("C")] = 523.25;
+music[hashCode("C#")] = 554.37;
+music[hashCode("D")] = 587.33;
+music[hashCode("D#")] = 622.25;
+music[hashCode("E")] = 659.25;
+music[hashCode("F")] = 698.46;
+music[hashCode("F#")] = 739.99;
+music[hashCode("G")] = 783.99;
+music[hashCode("G#")] = 830.61;
+music[hashCode("A")] = 880.00;
+music[hashCode("A#")] = 932.33;
+music[hashCode("B")] = 987.77;
+
+var word;
+var result = [];
+var gnum = 5;
+var ng = {};
+var butt;
+var g;
+
+function playAll(e) {
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;
+  var ctx = new AudioContext();
+
+    var o, t=ctx.currentTime, arrayLength = result.length, playlength = 0;
+
+    for (var i = 0; i < arrayLength; i++) {
+        o = ctx.createOscillator();
+        playlength =  result[i].len;
+        
+      const g = ctx.createGain();
+        o.connect(g);
+        g.connect(ctx.destination);
+    g.gain.exponentialRampToValueAtTime(
+      0.00001, ctx.currentTime + playlength + t
+    );
+    
+        o.frequency.value = music[hashCode(result[i].note)];
+        o.start(t);
+        o.stop(t + playlength);
+        t += playlength;
+        o.connect(ctx.destination);
+    }
+}
+
+function hashCode(str) {
+  return str.split('').reduce((prevHash, currVal) =>
+    (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0);
+}
+
+function setup() {
+
+  for (var i = 0; i < word.length - 1; i++) {
+    g = hashCode(word[i].note);
+
+    if (!ng[g]) {
+    	ng[g] = [];
+    }
+     ng[g].push(word[i + 1]);
+  }
+}
+
+function gen() {
+  var cg = word[0].note;
+
+ result.push(word[0]);
+
+  for (var i = 0; i < 3; i++) {
+    var arr = ng[hashCode(cg)];
+    if (!arr) {
+      break;
+    }
+    var sec = arr[Math.floor(Math.random()*arr.length)];
+    result.push(JSON.parse(JSON.stringify(sec)));
+    cg = sec.note;
+  }
+console.log(result);
+}
 function getData(url, str) {
     return 	fetch(url, {
 		 method: 'POST',
@@ -73,6 +176,15 @@ function parseData(str) {
           parseFloat(jsonData.documents[0].confidenceScores.positive),
           parseFloat(jsonData.documents[0].confidenceScores.negative)
         )
+	if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.35) {
+		word = sad;
+
+	} else if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.90) {
+		word = happy;
+	}
+	setup();
+	gen();
+  	playAll();
     })
 }
 </script>
