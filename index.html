@@ -44,7 +44,7 @@ class Note {
 }
 	
 var sad = [
-new Note("A", 1), new Note("B", 1), new Note("E", 1), new Note("G", 2), new Note("F#", 2), new Note("E", 5), new Note("E", 4), new Note("G", 1), new Note("A", 1), new Note("G", 1), new Note("F#", 4), new Note("B", 2), new Note("B", 4), new Note("A", 4), new Note("A", 1), new Note("B", 1), new Note("E", 1), new Note("G", 2), new Note("F#", 2), new Note("E", 5),  new Note("E", 4), new Note("G", 1), new Note("A", 1),  new Note("G", 1), new Note("F#", 3), new Note("B", 2), new Note("E", 8), new Note("F#", 1/2), new Note("E", 1/2), new Note("B",3), new Note("B", 2), new Note("E", 1), new Note("G", 1), new Note("A", 4), new Note("A", 4)
+	new Note("A", 1), new Note("B", 1), new Note("E", 1), new Note("G", 2), new Note("F#", 2), new Note("E", 5), new Note("E", 4), new Note("G", 1), new Note("A", 1), new Note("G", 1), new Note("F#", 4), new Note("B", 2), new Note("B", 4), new Note("A", 4), new Note("A", 1), new Note("B", 1), new Note("E", 1), new Note("G", 2), new Note("F#", 2), new Note("E", 5),  new Note("E", 4), new Note("G", 1), new Note("A", 1),  new Note("G", 1), new Note("F#", 3), new Note("B", 2), new Note("E", 8), new Note("F#", 1/2), new Note("E", 1/2), new Note("B",3), new Note("B", 2), new Note("E", 1), new Note("G", 1), new Note("A", 4), new Note("A", 4), new Note("G", 4), new Note("F#", 1), new Note("G", 1), new Note("A", 1), new Note("D", 1), new Note("B", 4), new Note("A", 1), new Note("A", 1/2), new Note("F", 1), new Note("D", 1), new Note("A", 1), new Note("F#", 1), new Note("E", 1), new Note("B", 1), new Note("B", 2), new Note("E", 1), new Note("G", 1), new Note("A", 2), new Note("E", 2), new Note("E", 4), new Note("G", G), new Note("F#", 1), new Note("G", 1), new Note("A", 1), new Note("D", 1), new Note("E", 4), new Note("E", 4), new Note("E", 4), new Note("E", 1), new Note("F#", 1), new Note("G", 1), new Note("A", 1), new Note("E", 1), new Note("G", 2), new Note("F#", 2), new Note("E", 4), new Note("E", 4), new Note("G", 1), new Note("A", 1), new Note("G", 1), new Note("F#", 1), new Note("B", 2)
 ];
 	
 var semihappy = [
@@ -188,9 +188,7 @@ ng = {};
           parseFloat(jsonData.documents[0].confidenceScores.positive),
           parseFloat(jsonData.documents[0].confidenceScores.negative)
         )
-	if (parseFloat(jsonData.documents[0].confidenceScores.neutral) > 0.50) {
-		word = lull;
-	} else if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.30) {
+	if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.30) {
 		word = sad;
 	} else if (parseFloat(jsonData.documents[0].confidenceScores.positive) < 0.50) {
 		word = melac;
@@ -201,7 +199,6 @@ ng = {};
 	} else {
 		word = happy;
 	}
-	    console.log(word);
 	setup();
 	gen();
   	playAll();
@@ -337,10 +334,6 @@ background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, F
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="github link" width="30" height="30" style="vertical-align: bottom; margin-left: -2px">
                 </a>
               </li>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">Additional Information</h4>
-            <p class="lead mb-0">  </p>
           </div>
         </div>
       </div>
