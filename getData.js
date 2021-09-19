@@ -1,5 +1,3 @@
-let $div1_ = document.querySelector('#data');
-
 function getData(url, str) {
     return 	fetch(url, {
 		 method: 'POST',
